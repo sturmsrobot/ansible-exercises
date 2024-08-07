@@ -10,4 +10,4 @@
 4. Füge ein Play für die Super-Gruppe hinzu, welches jeden Host dazu bringt, seine eigene IP-Adresse auszugeben. (Recherche nötig!)
  - Wende das Playbook an. Siehst du auch hier von den richtigen Hosts die passenden Meldungen?
 
-5. ERFOLG!
+5. ERFOLG! (In Exercise 6 könnte deine hosts.ini interessant sein)
