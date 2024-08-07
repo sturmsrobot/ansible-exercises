@@ -58,7 +58,7 @@ resource "aws_instance" "web" {
   key_name               = var.key_name                                                # Hier AWS SSH-Key-Namen  eintragen                                            # Key-Namen eintragen
 
   tags = {
-    Name = "Assignment 06-08"
+    Name = "Ansible-Exercise"
   }
 }
 
