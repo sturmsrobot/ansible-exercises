@@ -6,7 +6,7 @@ provider "aws" {
 data "terraform_remote_state" "vpc" {
   backend = "s3"
   config = {
-    bucket = "<bucket-name>" # Hier Bucketnamen der VPC-tfstate eintragen
+    bucket = "techstarter-tf-test"
     key    = "ansible-exercise/vpc.tfstate"
     region = "eu-central-1"
   }

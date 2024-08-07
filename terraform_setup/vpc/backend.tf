@@ -1,6 +1,6 @@
 terraform {
   backend "s3" {
-    bucket = "<bucket-name>" # Hier eigenen Bucket eintragen
+    bucket = "techstarter-tf-test"
     key    = "ansible-exercise/vpc.tfstate"
     region = "eu-central-1"
   }
