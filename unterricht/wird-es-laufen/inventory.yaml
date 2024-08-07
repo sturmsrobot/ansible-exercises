@@ -1,0 +1,20 @@
+all:
+  children:
+    hosts:
+      children:
+        sub_group_1: {}
+        sub_group_2: {}
+    servers:
+      children:
+        sub_group_1:
+          hosts:
+            ec2-instance-1:
+              ansible_host: 18.185.188.116
+              ansible_ssh_private_key_file: ~/.ssh/ts-23-10-ansible-julius.pem
+              ansible_user: ubuntu
+        sub_group_2:
+          hosts:
+            ec2-instance-2:
+              ansible_host: 3.79.179.254
+              ansible_ssh_private_key_file: ~/.ssh/ts-23-10-ansible-julius.pem
+              ansible_user: ubuntu
