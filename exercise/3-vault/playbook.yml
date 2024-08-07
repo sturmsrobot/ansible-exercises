@@ -1,9 +1,8 @@
 ---
-- name: Vault
-  hosts: secret_service
-  vars_files:
-    - <geheime-datei>
-  tasks: 
-    - name: Show Password
-      debug:
-        var: <geheime-variable>
+- name: Exercise 3
+  hosts: ex3_hosts
+  become: yes
+  tasks:
+    - name: Load and display the secret message
+      ansible.builtin.debug:
+        msg: "{{ lookup('ansible.builtin.file', 'secret.yml', vault_password_file='~/.vault_pass.txt') }}"
