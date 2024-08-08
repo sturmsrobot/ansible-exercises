@@ -1,0 +1,36 @@
+---
+- name: Group 1 Play
+  hosts: group1
+  become: yes
+  tasks:
+    - name: Sag Hallo aus Group 1
+      debug:
+        msg: "Hallo von: group1"
+
+- name: Group 2 Play
+  hosts: group2
+  become: yes
+  tasks:
+    - name: Sag Hallo aus Group 2
+      debug:
+        msg: "Hallo von: group2"
+
+- name: Group 3 Play
+  hosts: group3
+  become: yes
+  tasks:
+    - name: Sag Hallo aus Group 3
+      debug:
+        msg: "Hallo von: group3"
+
+- name: Super Group Play
+  hosts: servers
+  become: yes
+  tasks:
+    - name: Get IP Address
+      command: hostname -I
+      register: ip_address
+
+    - name: Show IP Address
+      debug:
+        var: ip_address.stdout
